@@ -40,6 +40,15 @@ $productos =[
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Hello, world!</title>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0RXZP1YRK1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0RXZP1YRK1');
+</script>
 </head>
 <body >
     <nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
@@ -56,10 +65,10 @@ $productos =[
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav flex-grow-1 justify-content-between">
-                <li class="nav-item"><a class="nav-link" href="#"><font style="vertical-align: inherit;">Tienda</font></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><font style="vertical-align: inherit;">Articulo</font></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><font style="vertical-align: inherit;">About</font></a></li>
-                <li class="nav-item"><a class="nav-link" href="#">
+                <li class="nav-item"><a class="nav-link" href="/index.php"><font style="vertical-align: inherit;">Tienda</font></a></li>
+                <li class="nav-item"><a class="nav-link" href="/article.php"><font style="vertical-align: inherit;">Articulo</font></a></li>
+                <li class="nav-item"><a class="nav-link" href="/about.php"><font style="vertical-align: inherit;">About</font></a></li>
+                <li class="nav-item"><a class="nav-link" href="/kart.php">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                     <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
                   </svg>
@@ -76,7 +85,7 @@ $productos =[
         <div class="col">
           <div class="card mb-4 rounded-3 shadow-sm" style="max-width: 250px;">
             <div class="card-header py-3">
-              <h4 class="my-0 fw-normal"><font style="vertical-align: inherit;"><?= $producto["titulo"] ?></font></h4>
+              <a href="/product.php" class="my-0 fw-normal"><font style="vertical-align: inherit;"><?= $producto["titulo"] ?></font></a>
             </div>
             <div class="card-body">
             <img src="<?= $producto["imagen"] ?>" width="100%" height="100%" alt="<?= $producto["titulo"] ?>">
